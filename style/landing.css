@@ -1,0 +1,999 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:#fff;
+}
+
+/* ================= HEADER ================= */
+header{
+  width:100%;
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* ====== FILA SUPERIOR (IDIOMA) ====== */
+.top-bar{
+  width:100%;
+  display:flex;
+  justify-content:flex-end;
+  padding:4px 14px;
+}
+
+/* ===== IDIOMAS ===== */
+.language-dropdown{
+  position:relative;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+  user-select:none;
+}
+
+.selected-language{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.selected-language img,
+.lang-option img{
+  width:22px;
+  height:15px;
+  object-fit:cover;
+  display:block;
+}
+
+.selected-language::after{
+  content:"▼";
+  font-size:10px;
+  margin-left:4px;
+}
+
+.language-options{
+  position:absolute;
+  top:26px;
+  right:0;
+  background:#f3f3f3;
+  border-radius:8px;
+  padding:6px 8px;
+  display:none;
+  box-shadow:0 6px 10px rgba(0,0,0,0.15);
+  min-width:120px;
+}
+
+.lang-option{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  cursor:pointer;
+  padding:4px 6px;
+}
+
+.lang-option:hover{
+  background:#e6e6e6;
+  border-radius:6px;
+}
+
+.language-dropdown.active .language-options{
+  display:block;
+}
+
+/* ====== FILA PRINCIPAL ====== */
+.header-container{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+.header-center{
+  width:100%;
+  max-width:1400px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:60px;
+  padding:14px 40px 20px 40px;
+}
+
+.logo img{
+  height:80px;
+  display:block;
+}
+
+nav{
+  display:flex;
+}
+
+.menu-redes{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.menu-redes li a{
+  text-decoration:none;
+  color:#000;
+  font-weight:700;
+  font-size:14px;
+  text-transform:uppercase;
+  transition:0.2s ease;
+}
+
+.menu-redes li a:hover,
+.menu-redes li a.active{
+  color:#e10600;
+}
+
+.menu-redes .social-icons{
+  display:flex;
+  gap:10px;
+  margin-left:6px;
+}
+
+.menu-redes .social-icons img{
+  width:18px;
+  height:18px;
+  display:block;
+}
+
+.header-separator {
+  width: 100%;
+  height: 18px;
+  background: #eeeeee;
+  box-shadow: 
+    inset 0 2px 4px rgba(0,0,0,0.08),
+    0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* ========== SLIDER ========= */
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 120px);
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 42px;
+  padding: 12px 20px;
+  cursor: pointer;
+  z-index: 50;
+  border-radius: 8px;
+}
+
+.slider-btn.left { left: 25px; }
+.slider-btn.right { right: 25px; }
+
+/* ================= SECCION HISTORIA ================= */
+/* ================= SECCION HISTORIA ================= */
+/* ================= SECCION HISTORIA ================= */
+
+/* ================= SECCION HISTORIA ================= */
+
+.historia {
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
+  padding: 30px 0;
+  display: block;   /* ✅ CORREGIDO */
+  background: transparent;
+}
+
+/* CONTENEDOR GENERAL CENTRADO EN PANTALLA */
+.historia-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* BLOQUE MAESTRO: TODO SE ALINEA A ESTE */
+.contenido {
+  width: 900px;               /* 👉 Este ancho gobierna TODO */
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 700;
+  color: #777;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.breadcrumb .home {
+  color: #d7191c;
+}
+
+/* ===== TITULO ALINEADO EXACTO CON EL BLOQUE A ===== */
+.contenido h2 {
+  width: 100%;
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 35px;
+  text-align: left;      /* 🔑 CLAVE: MISMA VERTICAL QUE A */
+}
+
+.rojo {
+  color: #d7191c;
+}
+
+/* ===== BLOQUES A, B, C, D ===== */
+.bloques {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.fila {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-items: flex-start;  /* ✅ evita estiramientos raros */
+  gap: 30px;
+   margin-bottom: 5px;       /* ✅ gap real garantizado */
+}
+
+/* ICONOS ROJOS */
+.bloque-img {
+  width: 120px;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* TEXTO DE CADA BLOQUE */
+.fila p {
+  flex: 1;
+  color: #444;
+  line-height: 1.6;     /* ✅ un poquito más compacto */
+  font-size: 13px;
+  text-align: justify;
+  margin: 0;           /* ✅ ESTE ERA EL QUE CREABA EL HUECO */
+  padding: 0;
+}
+
+
+.fila {
+  width: 100%;
+  display: flex;
+  align-items: center;   /* ✅ esto centra verticalmente el párrafo con el ícono */
+  gap: 30px;
+}
+
+
+.fila:last-child {
+  margin-bottom: 0;    /* ✅ evita espacio extra al final */
+}
+
+
+/* ===== BOTÓN ALINEADO EXACTO CON A, HOME Y TÍTULO (ACTUALIZADO) ===== */
+.boton {
+  display: inline-block;
+  margin-top: 45px;        /* se mantiene igual */
+  margin-left: 0;         /* se mantiene igual */
+  white-space: nowrap;
+  width: fit-content;
+  max-width: none;
+
+  background: linear-gradient(90deg, #7a0000 0%, #e30613 50%, #7a0000 100%);
+  color: #fff;
+  padding: 10px 26px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: all 0.35s ease;
+}
+
+/* ✅ Animación EXACTA del botón rojo */
+.boton:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+  filter: brightness(1.15);
+}
+
+
+/* ===== MAPA DE FONDO ===== */
+.mapa-fondo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1100px;
+  max-width: 95%;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ================= carrusel========== */
+/* ========== SECCIÓN MARCAS (AISLADA) ========== */
+
+.marcas {
+  width: 100%;
+  background: #fff;
+  padding: 0px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  padding: 30px 0;
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.carousel-item {
+  min-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
+}
+
+.carousel-item img {
+  max-height: 55px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+}
+
+.carousel-item img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+ 
+/* ================= SECCION 3 ================= */
+/* ========== SECCIÓN CALDERA ========== */
+
+/* ========== SECCIÓN CALDERA ========== */
+
+/* ========== SECCIÓN CALDERA (VERSIÓN FINAL AJUSTADA) ========== */
+
+/* ========== SECCIÓN CALDERA (VERSIÓN FINAL DEFINITIVA) ========== */
+
+/* ========== SECCIÓN CALDERA (MODELO CLEAVER CRUZANDO LA CALDERA) ========== */
+/* ========== SECCIÓN CALDERA (VERSIÓN FINAL COMPLETA) ========== */
+
+/* ========== SECCIÓN CALDERA (VERSIÓN FINAL DEFINITIVA ESTABLE) ========== */
+
+/* ========== SECCIÓN CALDERA (VERSIÓN FINAL CORRECTA) ========== */
+
+/* ========== SECCIÓN CALDERA (VERSIÓN FINAL DEFINITIVA) ========== */
+
+.seccion-caldera {
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* LÍNEA SUPERIOR */
+.linea-separacion {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, transparent, #bbb, transparent);
+  margin-bottom: 50px;
+}
+
+/* CONTENEDOR CENTRAL */
+.caldera-wrapper {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 40px;
+  position: relative;   /* ✅ Referencia correcta para el botón */
+}
+
+/* BLOQUE VISUAL (CALDERA + LOGO) */
+.caldera-visual {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  opacity: 0;
+  transform: scale(0.90);
+
+  transition: 3s cubic-bezier(0.22, 1, 0.36, 1); /* ✅ AQUÍ VA */
+}
+
+
+
+
+/* ✅ CALDERA MÁS PEQUEÑA */
+.img-caldera {
+  width: 70%;
+  margin: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* ✅ LOGO CLEAVER CRUZANDO LA CALDERA Y UN POCO MÁS ARRIBA */
+.logo-caldera {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.08);
+  width: 1000px;
+  max-width: 98vw;
+  opacity: 0;
+
+  transition: 3s cubic-bezier(0.22, 1, 0.36, 1); /* ✅ AQUÍ VA */
+  
+  z-index: 3;
+  pointer-events: none;
+}
+
+
+
+
+.caldera-texto {
+  max-width: 1000px;
+  margin: 5px auto 0 auto;
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: #444;
+  text-align: justify;        /* ✅ TEXTO JUSTIFICADO */
+
+  opacity: 0;
+  transform: translateX(-40px); /* ✅ Entra desde la izquierda */
+  filter: blur(8px);            /* ✅ BLUR INICIAL */
+  transition: 
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+
+
+/* ✅ BOTÓN ARRIBA DEL TEXTO SIN AFECTARLO (ACTUALIZADO AL ESTILO btn-rojo) */
+.caldera-boton {
+  position: absolute;
+  right: 275px;
+  top: 400px;              /* ✅ Se respeta tu posición */
+  z-index: 5;
+
+  white-space: nowrap;
+  width: fit-content;
+  max-width: none;
+
+  background: linear-gradient(90deg, #7a0000 0%, #e30613 50%, #7a0000 100%);
+  color: #fff;
+  padding: 10px 26px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: all 0.35s ease;
+}
+
+/* ✅ Hover EXACTO del btn-rojo */
+.caldera-boton:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+  filter: brightness(1.15);
+}
+
+
+
+/* ========== ACTIVACIÓN DE ANIMACIONES ========== */
+
+.seccion-caldera.active .fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.seccion-caldera.active .fade-right {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.seccion-caldera.active .fade-up {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.12s;
+}
+
+.seccion-caldera.active .fade-up-delay {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+.seccion-caldera.active .caldera-texto {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);   /* ✅ Se quita el blur */
+}
+
+/* ================= SECCION 4 ================= */
+/* ================= SECCION 4 ================= */
+/* ================= SECCION 4 ================= */
+.seccion-soluciones {
+  width: 100%;
+  padding: 30px 5%;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* CONTENEDOR DE TODO */
+.cards-contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  gap: 40px;
+  justify-content: center;
+  position: relative;
+}
+
+/* BLOQUE COMPLETO (TÍTULO + CARD) */
+.card-bloque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+}
+
+/* ✅ TITULO FUERA DE LA CARD */
+.titulo-card {
+  font-size: 22px;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.titulo-card span {
+  color: #e30613;
+  display: block;
+}
+
+/* ✅ EFECTO BLUR SOLO ENTRE CARDS */
+.cards-contenedor:has(.card-solucion:hover) 
+.card-solucion:not(:hover) {
+  filter: blur(4px);
+  transform: scale(0.95);
+}
+
+/* ✅ CARD LIMPIA + MISMO TAMAÑO PARA TODAS */
+.card-solucion {
+  width: 320px;
+  height: 560px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  padding: 25px;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+
+  /* ✅ CONTROL TOTAL DE LAS ZONAS */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* ✅ CARD ACTIVA (NO TAPA TÍTULO) */
+.card-solucion:hover {
+  filter: blur(0) !important;
+  transform: scale(1.12) translateY(20px);
+  z-index: 5;
+}
+
+/* ✅ ZONA DE IMAGEN CON ALTURA FIJA */
+.img-card {
+  width: 100%;
+  height: 200px; /* ✅ CLAVE para alinear la línea roja */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.img-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ✅ LINEA ROJA SIEMPRE ALINEADA */
+.linea-roja {
+  width: 100%;
+  height: 6px;
+  background: #e30613;
+  margin: 18px 0 18px 0;
+  flex-shrink: 0; /* ✅ IMPIDE QUE SE MUEVA */
+}
+
+/* ✅ TEXTO CONTROLADO (LLENA EL RESTO DEL ESPACIO) */
+.card-solucion p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+
+  flex-grow: 1;      /* ✅ se expande de forma uniforme */
+  overflow: hidden; /* ✅ no desborda */
+}
+
+/* ✅ BOTÓN ALINEADO A LA PRIMERA CARD */
+.btn-alineado {
+  grid-column: 1 / 2;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+/* ✅ BOTÓN ROJO FINAL */
+.btn-rojo {
+  margin: 30px auto 0;
+  display: inline-block;
+
+  white-space: nowrap;
+  width: fit-content;
+  max-width: none;
+
+  background: linear-gradient(90deg,
+    #7a0000 0%,
+    #e30613 50%,
+    #7a0000 100%
+  );
+
+  color: #fff;
+  padding: 10px 26px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: all 0.35s ease;
+}
+
+.btn-rojo:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+  filter: brightness(1.15);
+}
+
+
+/* ========== SECCIÓN 5 - CATÁLOGO ========== */
+
+/* ========== SECCIÓN 5 - CATÁLOGO ========== */
+
+.seccion-catalogo {
+  width: 100%;
+  background: #fff;
+  padding-bottom: 30px;
+}
+
+/* IMAGEN SUPERIOR */
+.banner-catalogo {
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-catalogo img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* TEXTO */
+.catalogo-info {
+  max-width: 1100px;
+  margin: 80px auto 60px;
+  padding: 0 20px;
+  text-align: left;              /* ✅ YA NO CENTRA TODO */
+}
+
+.catalogo-info h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #444;
+  text-align: center;            /* ✅ SOLO EL TÍTULO CENTRADO */
+}
+
+.catalogo-info h2 span {
+  color: #e30613;
+}
+
+/* ✅ PÁRRAFO JUSTIFICADO DE VERDAD */
+.catalogo-info p {
+  font-size: 15px;
+  max-width: 700px;
+  margin: 20px auto 30px;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;           /* ✅ JUSTIFICADO */
+}
+
+/* BOTÓN */
+.btn-catalogo {
+  display: block;                 /* ✅ FORZAMOS BLOQUE */
+  width: fit-content;             
+  margin: 0 auto;                 /* ✅ CENTRADO PERFECTO */
+
+  background: linear-gradient(90deg, #7a0000 0%, #e30613 50%, #7a0000 100%);
+  color: #fff;
+  padding: 10px 26px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: all 0.35s ease;
+}
+
+
+.btn-catalogo:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+  filter: brightness(1.15);
+}
+
+/* ========== PRODUCTOS DISTRIBUIDOS EN TODA LA PANTALLA ========== */
+
+.catalogo-productos {
+  width: 100%;
+  margin: auto;
+  padding: 40px 60px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+  overflow-x: auto;
+}
+
+/* Productos un poco más grandes */
+.catalogo-productos img {
+  height: 82px;
+  object-fit: contain;
+  transition: 
+    transform 0.35s cubic-bezier(.25,.8,.25,1),
+    filter 0.35s ease,
+    opacity 0.35s ease;
+  cursor: pointer;
+}
+
+.catalogo-productos:hover img {
+  opacity: 0.4;
+  filter: blur(1px);
+}
+
+.catalogo-productos img:hover {
+  transform: scale(1.35);
+  opacity: 1;
+  filter: blur(0);
+  z-index: 10;
+}
+
+
+/* ========== SECCIÓN 6 - VISITA TÉCNICA ========== */
+/* ========== SECCIÓN 6 - VISITA TÉCNICA ========== */
+
+.seccion-visita {
+  width: 100%;
+  background: #fff;
+  padding: 80px 20px;
+}
+
+.visita-contenedor {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+/* ===== BLOQUE DE TEXTO ===== */
+
+.visita-texto {
+  max-width: 650px;
+}
+
+/* ===== TÍTULO ===== */
+
+.visita-texto h2 {
+  font-size: 44px;
+  font-weight: 900;
+  color: #444;
+  line-height: 1.15;
+}
+
+.rojo-inline {
+  color: #e30613;
+}
+
+.rojo-bloque {
+  color: #e30613;
+  display: block;
+}
+
+/* ===== PÁRRAFO ===== */
+
+.visita-texto p {
+  margin-top: 24px;
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+/* ===== BOTÓN ===== */
+
+.visita-texto .btn-degradado {
+  margin-top: 32px;
+  display: inline-block;
+  padding: 15px 42px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 35px;
+  color: #fff;
+  background: linear-gradient(90deg, #b30000, #e30613, #b30000);
+  text-decoration: none;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.visita-texto .btn-degradado:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(227, 6, 19, .35);
+}
+
+/* ===== IMAGEN ===== */
+
+.visita-imagen {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.visita-imagen img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 950px) {
+  .visita-contenedor {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .visita-texto {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .visita-imagen {
+    justify-content: center;
+  }
+}
+
+
+/* ================= FOOTER ================= */
+
+/* ========== FOOTER ========== */
+
+.footer {
+  width: 100%;
+  background: #444;
+  color: #fff;
+  padding: 80px 20px;
+}
+
+.footer-contenedor {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-logo img {
+  width: 140px;
+  margin-bottom: 15px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.footer-col h4 {
+  font-size: 14px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e30613;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.footer-anios img {
+  width: 110px;
+}
+

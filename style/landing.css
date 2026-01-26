@@ -952,7 +952,7 @@ nav{
   width: 100%;
   background: #444;
   color: #fff;
-  padding: 80px 20px;
+  padding: 80px 20px 40px;
 }
 
 .footer-contenedor {
@@ -975,6 +975,18 @@ nav{
   color: #ddd;
 }
 
+.footer-contacto {
+  margin-top: 18px;
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  color: #e8e8e8;
+}
+
+.footer-contacto strong {
+  color: #fff;
+}
+
 .footer-col h4 {
   font-size: 14px;
   margin-bottom: 15px;
@@ -995,5 +1007,55 @@ nav{
 
 .footer-anios img {
   width: 110px;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 13px;
+  color: #d9d9d9;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: #f5f5f5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.footer-social a:hover {
+  transform: translateY(-2px);
+}
+
+.footer-social img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+@media (max-width: 1000px) {
+  .footer-contenedor {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 

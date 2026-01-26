@@ -6,11 +6,11 @@ const languageOptions = document.getElementById("languageOptions");
 const languages = {
   ES: {
     text: "ESPAÑOL",
-    flag: "/assets/icons/ESPAÑOL.png"
+    flag: "/smo/assets/icons/ESPAÑOL.png"
   },
   EN: {
     text: "ENGLISH",
-    flag: "/assets/icons/INGLES.png"
+    flag: "/smo/assets/icons/INGLES.png"
   }
 };
 
